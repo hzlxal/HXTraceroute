@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入目标IP地址" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ah8-mA-RRR" userLabel="IP地址">
+                                <rect key="frame" x="24" y="50" width="335" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjV-D7-u84">
+                                <rect key="frame" x="150" y="133" width="75" height="30"/>
+                                <state key="normal" title="Traceroute"/>
+                                <connections>
+                                    <action selector="beginTraceroute:" destination="BYZ-38-t0r" eventType="touchDown" id="dtP-Tt-wMT"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L9a-kk-JcM" userLabel="resultView">
+                                <rect key="frame" x="0.0" y="196" width="375" height="471"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="471" id="Jeu-aA-SbE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L9a-kk-JcM" firstAttribute="top" secondItem="VjV-D7-u84" secondAttribute="bottom" constant="33" id="O18-kL-vKP"/>
+                            <constraint firstItem="L9a-kk-JcM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZrN-kR-9cI"/>
+                            <constraint firstItem="L9a-kk-JcM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bpR-zj-VdE"/>
+                            <constraint firstAttribute="trailing" secondItem="L9a-kk-JcM" secondAttribute="trailing" id="hcO-re-W1E"/>
+                            <constraint firstItem="L9a-kk-JcM" firstAttribute="centerX" secondItem="VjV-D7-u84" secondAttribute="centerX" id="ix0-RH-5lR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ipTextField" destination="ah8-mA-RRR" id="21m-En-0JT"/>
+                        <outlet property="resultView" destination="L9a-kk-JcM" id="a1w-j2-pyL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
